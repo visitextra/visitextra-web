@@ -1,0 +1,123 @@
+.header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background-color: #02001B; /* Dark Blue */
+  color: var(--foreground);
+  z-index: var(--z-nav-sticky);
+  border-bottom: 1px solid var(--border);
+  padding: var(--spacing-4) var(--spacing-6);
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.logoLink {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logo {
+  height: 2.5rem;
+  width: auto;
+  object-fit: contain;
+}
+
+.desktopNav {
+  display: none;
+  gap: var(--spacing-8);
+}
+
+@media (min-width: 992px) {
+  .desktopNav {
+    display: flex;
+  }
+}
+
+.navLink {
+  color: var(--foreground);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color var(--animation-duration-fast) ease;
+  padding: var(--spacing-2) 0;
+  position: relative;
+}
+
+.navLink::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #DA9931;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform var(--animation-duration-normal) ease-out;
+}
+
+.navLink:hover {
+  color: #DA9931;
+}
+
+.navLink:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.rightSection {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-4);
+}
+
+.langSelectorWrapper {
+  width: 80px;
+}
+
+.langSelectorTrigger {
+  background-color: var(--surface);
+  border-color: var(--border);
+  height: 2.25rem;
+  font-weight: 500;
+}
+
+.mobileMenuButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  color: var(--foreground);
+  cursor: pointer;
+  padding: var(--spacing-2);
+  border-radius: var(--radius);
+}
+
+@media (min-width: 992px) {
+  .mobileMenuButton {
+    display: none;
+  }
+}
+
+.mobileNav {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4);
+  padding: var(--spacing-4) 0;
+  border-top: 1px solid var(--border);
+  margin-top: var(--spacing-4);
+}
+
+@media (min-width: 992px) {
+  .mobileNav {
+    display: none;
+  }
+}

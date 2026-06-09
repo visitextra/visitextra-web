@@ -1,0 +1,104 @@
+.pageWrapper {
+  width: 100%;
+  color: var(--foreground);
+}
+
+.hero {
+  background-color: var(--surface);
+  padding: var(--spacing-16) var(--spacing-8);
+  text-align: center;
+  border-bottom: 1px solid var(--border);
+}
+
+.heroContent h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: var(--spacing-4);
+  color: var(--primary);
+}
+
+.heroContent p {
+  font-size: 1.125rem;
+  color: var(--muted-foreground);
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.mainContent {
+  padding: var(--spacing-12) var(--spacing-8);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.formContainer {
+  background-color: var(--card);
+  padding: var(--spacing-8);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--border);
+}
+
+.formGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-6);
+}
+
+.formField {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
+}
+
+.formField label {
+  font-weight: 500;
+  font-size: 0.9375rem;
+}
+
+.fullWidth {
+  grid-column: 1 / -1;
+}
+
+.errorMessage {
+  color: var(--error);
+  font-size: 0.875rem;
+  margin-top: var(--spacing-1);
+}
+
+.submitButton {
+  margin-top: var(--spacing-8);
+  width: 100%;
+  background-color: var(--accent);
+  color: var(--accent-foreground);
+  font-size: 1.125rem;
+  font-weight: 600;
+  height: 3.5rem;
+  border-radius: var(--radius-md);
+}
+
+.submitButton:hover {
+  background-color: color-mix(in srgb, var(--accent), black 10%);
+}
+
+.submitButton:focus-visible {
+  box-shadow: var(--shadow-focus);
+}
+
+@media (max-width: 768px) {
+  .formGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .heroContent h1 {
+    font-size: 2rem;
+  }
+
+  .mainContent {
+    padding: var(--spacing-8) var(--spacing-4);
+  }
+
+  .formContainer {
+    padding: var(--spacing-6);
+  }
+}

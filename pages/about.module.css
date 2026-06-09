@@ -1,0 +1,219 @@
+.aboutPage {
+  background-color: var(--background);
+  color: var(--foreground);
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: var(--spacing-16) var(--spacing-6);
+  background: linear-gradient(135deg, hsl(244 100% 5.3%) 0%, hsl(244 100% 3%) 100%);
+  border-bottom: 1px solid var(--border);
+}
+
+.heroContent {
+  max-width: 800px;
+}
+
+.heroTitle {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--primary);
+  line-height: 1.2;
+}
+
+@media (min-width: 768px) {
+  .heroTitle {
+    font-size: 3.5rem;
+  }
+}
+
+.mainContent {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--spacing-16) var(--spacing-6);
+}
+
+.topGrid {
+  display: grid;
+  gap: var(--spacing-8);
+  margin-bottom: var(--spacing-16);
+}
+
+@media (min-width: 768px) {
+  .topGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.contentCard {
+  background-color: var(--card);
+  padding: var(--spacing-8);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  border: 1px solid transparent;
+  transition: transform var(--animation-duration-normal) ease,
+    box-shadow var(--animation-duration-normal) ease,
+    border-color var(--animation-duration-normal) ease;
+}
+
+.contentCard:hover {
+  transform: translateY(-4px);
+  border-color: #DA9931;
+  box-shadow: var(--shadow-lg), 0 0 15px color-mix(in srgb, #DA9931 30%, transparent);
+}
+
+.cardTitle {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: var(--accent);
+  margin-bottom: var(--spacing-4);
+}
+
+.cardText {
+  font-size: 1.0625rem;
+  line-height: 1.7;
+  color: var(--foreground);
+}
+
+.storySection {
+  background-color: var(--card);
+  padding: var(--spacing-12);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  margin-bottom: var(--spacing-16);
+}
+
+.storySectionTitle {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--accent);
+  margin-bottom: var(--spacing-6);
+  text-align: center;
+}
+
+.storyText {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  color: var(--foreground);
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: justify;
+}
+
+.valuesSection {
+  margin-bottom: var(--spacing-16);
+}
+
+.valuesSectionHeader {
+  text-align: center;
+  margin-bottom: var(--spacing-12);
+}
+
+.valuesSectionTitle {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: var(--spacing-3);
+}
+
+.valuesSectionSubtitle {
+  font-size: 1.125rem;
+  color: var(--muted-foreground);
+}
+
+.valuesGrid {
+  display: grid;
+  gap: var(--spacing-6);
+  grid-template-columns: repeat(1, 1fr);
+}
+
+@media (min-width: 640px) {
+  .valuesGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .valuesGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.valueCard {
+  background-color: var(--card);
+  padding: var(--spacing-8);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  border: 1px solid transparent;
+  transition: transform var(--animation-duration-normal) ease,
+    box-shadow var(--animation-duration-normal) ease,
+    border-color var(--animation-duration-normal) ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.valueCard:hover {
+  transform: translateY(-4px);
+  border-color: #DA9931;
+  box-shadow: var(--shadow-lg), 0 0 15px color-mix(in srgb, #DA9931 30%, transparent);
+}
+
+.valueIconWrapper {
+  width: 4rem;
+  height: 4rem;
+  background-color: var(--accent);
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--spacing-4);
+  transition: transform var(--animation-duration-normal) ease;
+}
+
+.valueCard:hover .valueIconWrapper {
+  transform: scale(1.1);
+}
+
+.valueIcon {
+  width: 2rem;
+  height: 2rem;
+  color: var(--accent-foreground);
+}
+
+.valueTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--primary);
+  margin-bottom: var(--spacing-3);
+}
+
+.valueDescription {
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: var(--muted-foreground);
+}
+
+.ctaSection {
+  margin-top: var(--spacing-16);
+  text-align: center;
+}
+
+.ctaButton {
+  background-color: var(--accent);
+  color: var(--accent-foreground);
+  font-weight: 600;
+  padding: var(--spacing-4) var(--spacing-8);
+  font-size: 1.125rem;
+  border-radius: var(--radius-full);
+  transition: transform var(--animation-duration-fast) ease, box-shadow var(--animation-duration-fast) ease;
+}
+
+.ctaButton:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}

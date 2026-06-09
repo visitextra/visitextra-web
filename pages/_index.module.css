@@ -1,0 +1,915 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
+  padding: var(--spacing-20) var(--spacing-6);
+  background-image: url("../assets/images/homevisitextra.png");
+  background-size: cover;
+  background-position: center;
+  color: #ffffff;
+  overflow: hidden;
+}
+
+.heroOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(2, 0, 27, 0.4),
+    rgba(2, 0, 27, 0.8)
+  );
+  z-index: 1;
+}
+
+.heroContentCentered {
+  position: relative;
+  z-index: 2;
+  max-width: 850px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: var(--spacing-6);
+  padding: 0 var(--spacing-4);
+}
+
+.mainHeadlineCentered {
+  font-size: 3.5rem;
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  text-shadow: 0 4px 16px rgba(0, 0, 0, 0.6);
+  color: #ffffff;
+}
+
+.subHeadlineCentered {
+  font-size: 1.25rem;
+  color: rgba(255, 255, 255, 0.95);
+  max-width: 650px;
+  line-height: 1.6;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+  margin-bottom: var(--spacing-4);
+}
+
+.heroDownloadButtonsCentered {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-6);
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+/* Alternating Feature Showcase Styles */
+.alternatingFeaturesSection {
+  padding: var(--spacing-20) var(--spacing-6);
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  border-top: 1px solid var(--border);
+}
+
+.sectionTitleWrapper {
+  text-align: center;
+  margin-bottom: var(--spacing-16);
+}
+
+.sectionSubtitle {
+  font-size: 1.125rem;
+  color: var(--muted-foreground);
+  margin-top: var(--spacing-2);
+}
+
+.alternatingList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-24);
+}
+
+/* Scroll reveal core styles */
+.revealSection {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.revealSectionActive {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.featureRow {
+  width: 100%;
+}
+
+.featureRowContent {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-16);
+  align-items: center;
+}
+
+.rowReverse {
+  direction: rtl;
+}
+
+.rowReverse > div {
+  direction: ltr;
+}
+
+.featureRowText {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--spacing-4);
+  text-align: left;
+}
+
+.featureRowBadge {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  background-color: rgba(218, 153, 49, 0.1);
+  color: #DA9931;
+  padding: var(--spacing-1.5) var(--spacing-3.5);
+  border-radius: var(--radius-full);
+  font-weight: 700;
+  border: 1px solid rgba(218, 153, 49, 0.2);
+}
+
+.featureRowTitle {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: var(--foreground);
+  line-height: 1.2;
+}
+
+.featureRowDescription {
+  font-size: 1.125rem;
+  color: var(--muted-foreground);
+  line-height: 1.6;
+}
+
+.featureRowVisual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.ctaButton {
+  background-color: #DA9931;
+  color: #02001B;
+  font-weight: 600;
+  padding: 0 var(--spacing-8);
+  height: 3.5rem;
+  font-size: 1.125rem;
+  border-radius: var(--radius-md);
+  border: none;
+}
+
+.ctaButton:hover {
+  background-color: color-mix(in srgb, #DA9931, black 10%);
+}
+
+/* Common Section Styles */
+.sectionTitle {
+  font-size: 2.5rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: var(--spacing-12);
+}
+
+.showcaseSection,
+.featuresSection,
+.ctaSection,
+.newsletterSection {
+  padding: var(--spacing-16) var(--spacing-6);
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Showcase Section */
+.phoneMockups {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--spacing-8);
+  margin-bottom: var(--spacing-12);
+  padding: var(--spacing-4) 0;
+}
+
+.phoneWrapperSide {
+  z-index: 2;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.phoneWrapperCenter {
+  z-index: 5;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.phoneContainer {
+  position: relative;
+  width: 250px;
+  height: 500px;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  transform-style: preserve-3d;
+}
+
+/* 3D Perspective Rotations */
+.rotateRight {
+  transform: perspective(1000px) rotateY(-14deg) rotateX(3deg) rotateZ(-2deg);
+}
+
+.rotateLeft {
+  transform: perspective(1000px) rotateY(14deg) rotateX(3deg) rotateZ(2deg);
+}
+
+.rotateCenter {
+  transform: scale(1.05);
+  z-index: 5;
+}
+
+/* Hover transforms */
+.rotateRight:hover {
+  transform: perspective(1000px) rotateY(-4deg) rotateX(1deg) rotateZ(0deg) translateY(-5px);
+  z-index: 10;
+}
+
+.rotateLeft:hover {
+  transform: perspective(1000px) rotateY(4deg) rotateX(1deg) rotateZ(0deg) translateY(-5px);
+  z-index: 10;
+}
+
+.rotateCenter:hover {
+  transform: scale(1.1) translateY(-8px);
+  z-index: 10;
+}
+
+/* Phone color styling variables */
+.phoneGold,
+.phoneBlue,
+.phoneSilver,
+.phoneRoseGold {
+  --bezel-color: #3E5A74;
+  --bezel-highlight: #7495B4;
+  --bezel-shadow: #27394A;
+  --button-color: #30475C;
+  --shadow-color: rgba(62, 90, 116, 0.15);
+  --shadow-hover-color: rgba(62, 90, 116, 0.3);
+}
+
+/* Phone buttons styling */
+.phoneButton {
+  position: absolute;
+  background-color: var(--button-color);
+  border-radius: 4px;
+  box-shadow: 
+    0 2px 4px rgba(2, 0, 27, 0.25),
+    inset 0 1px 1px rgba(255, 255, 255, 0.25);
+  z-index: 1;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.buttonLeft {
+  left: -4px;
+  width: 5px;
+}
+
+.buttonRight {
+  right: -4px;
+  width: 5px;
+}
+
+.buttonVolumeUp {
+  top: 90px;
+  height: 40px;
+}
+
+.buttonVolumeDown {
+  top: 145px;
+  height: 40px;
+}
+
+.buttonPower {
+  top: 115px;
+  height: 60px;
+}
+
+/* Adjust button styles when rotated Y to make them stand out or retract */
+.rotateRight .buttonLeft {
+  transform: translateZ(5px);
+  left: -2px;
+}
+.rotateRight .buttonRight {
+  transform: translateZ(-5px);
+  right: -1px;
+}
+
+.rotateLeft .buttonLeft {
+  transform: translateZ(-5px);
+  left: -1px;
+}
+.rotateLeft .buttonRight {
+  transform: translateZ(5px);
+  right: -2px;
+}
+
+/* Inner Screen Wrapper (with phone frame / bezel) */
+.phoneScreen {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: #02001B;
+  border: 11px solid var(--bezel-color);
+  border-radius: 40px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 
+    0 15px 35px rgba(2, 0, 27, 0.25),
+    inset 0 0 10px rgba(0, 0, 0, 0.8),
+    inset 0 0 2px 2px var(--bezel-highlight);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Rotate right box shadows */
+.rotateRight .phoneScreen {
+  box-shadow: 
+    -15px 20px 35px rgba(2, 0, 27, 0.25),
+    -5px 5px 15px var(--shadow-color),
+    inset 0 0 10px rgba(0, 0, 0, 0.8),
+    inset 0 0 2px 2px var(--bezel-highlight);
+}
+
+.rotateRight:hover .phoneScreen {
+  box-shadow: 
+    -20px 25px 45px rgba(2, 0, 27, 0.35),
+    -5px 5px 25px var(--shadow-hover-color),
+    inset 0 0 10px rgba(0, 0, 0, 0.8),
+    inset 0 0 2px 2px var(--bezel-highlight);
+}
+
+/* Rotate left box shadows */
+.rotateLeft .phoneScreen {
+  box-shadow: 
+    15px 20px 35px rgba(2, 0, 27, 0.25),
+    5px 5px 15px var(--shadow-color),
+    inset 0 0 10px rgba(0, 0, 0, 0.8),
+    inset 0 0 2px 2px var(--bezel-highlight);
+}
+
+.rotateLeft:hover .phoneScreen {
+  box-shadow: 
+    20px 25px 45px rgba(2, 0, 27, 0.35),
+    5px 5px 25px var(--shadow-hover-color),
+    inset 0 0 10px rgba(0, 0, 0, 0.8),
+    inset 0 0 2px 2px var(--bezel-highlight);
+}
+
+/* Center box shadows */
+.rotateCenter .phoneScreen {
+  box-shadow: 
+    0 25px 50px -12px rgba(2, 0, 27, 0.25),
+    0 0 15px var(--shadow-color),
+    inset 0 0 10px rgba(0, 0, 0, 0.8),
+    inset 0 0 2px 2px var(--bezel-highlight);
+}
+
+.rotateCenter:hover .phoneScreen {
+  box-shadow: 
+    0 35px 60px -10px rgba(2, 0, 27, 0.4),
+    0 0 25px var(--shadow-hover-color),
+    inset 0 0 10px rgba(0, 0, 0, 0.8),
+    inset 0 0 2px 2px var(--bezel-highlight);
+}
+
+/* Glare reflection overlay */
+.phoneScreenGlare {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.2) 0%,
+    rgba(255, 255, 255, 0.05) 45%,
+    transparent 45.1%,
+    transparent 100%
+  );
+  z-index: 8;
+  pointer-events: none;
+  border-radius: 28px;
+}
+
+/* Dynamic Island Notch (iPhone) */
+.phoneDynamicIsland {
+  position: absolute;
+  top: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 65px;
+  height: 18px;
+  background-color: #000000;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.5);
+  z-index: 10;
+}
+
+/* Punch Hole camera (Android) */
+.phonePunchHole {
+  position: absolute;
+  top: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 10px;
+  height: 10px;
+  background-color: #000000;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.5);
+  z-index: 10;
+}
+
+.phoneImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 28px;
+}
+
+.storeText {
+  text-align: center;
+  font-size: 1.125rem;
+  color: var(--muted-foreground);
+  margin-bottom: var(--spacing-8);
+}
+
+.storeLogos {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-6);
+  flex-wrap: wrap;
+}
+
+.storeLogoButton {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-4);
+  background-color: #02001B;
+  border: 1.5px solid rgba(255, 255, 255, 0.1);
+  border-radius: 14px;
+  padding: 12px 24px;
+  color: #ffffff;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  min-width: 195px;
+}
+
+.storeLogoButton:hover {
+  border-color: #DA9931;
+  box-shadow: 0 8px 25px rgba(218, 153, 49, 0.3);
+  transform: translateY(-3px);
+  background-color: #050324;
+}
+
+.storeBadge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 0.65rem;
+  background-color: #DA9931;
+  color: #02001B;
+  padding: 2px 8px;
+  border-bottom-left-radius: 8px;
+  font-weight: 700;
+}
+
+/* Features Section */
+.featuresGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--spacing-8);
+}
+
+.featureCard {
+  background-color: var(--card);
+  padding: var(--spacing-8);
+  border-radius: var(--radius-md);
+  text-align: center;
+  box-shadow: var(--shadow-md);
+  border: 1px solid transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-4);
+  transition: transform var(--animation-duration-normal) ease,
+    box-shadow var(--animation-duration-normal) ease,
+    border-color var(--animation-duration-normal) ease;
+}
+
+.featureCard:hover {
+  transform: translateY(-5px);
+  border-color: #DA9931;
+  box-shadow: var(--shadow-lg),
+    0 0 15px color-mix(in srgb, #DA9931 30%, transparent);
+}
+
+.featureIcon {
+  color: #DA9931;
+}
+
+.featureCard h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.featureCard p {
+  color: var(--muted-foreground);
+  line-height: 1.6;
+}
+
+/* How It Works Section */
+.howItWorksSection {
+  padding: var(--spacing-16) var(--spacing-6);
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  border-top: 1px solid var(--border);
+}
+
+.howItWorksSubtitle {
+  text-align: center;
+  font-size: 1.125rem;
+  color: var(--muted-foreground);
+  max-width: 600px;
+  margin: 0 auto var(--spacing-12) auto;
+  line-height: 1.6;
+}
+
+.stepsContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--spacing-8);
+  position: relative;
+}
+
+.stepCard {
+  background-color: var(--card);
+  padding: var(--spacing-8);
+  border-radius: var(--radius-md);
+  text-align: center;
+  box-shadow: var(--shadow-md);
+  border: 1px solid transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-4);
+  position: relative;
+  transition: transform var(--animation-duration-normal) ease,
+    box-shadow var(--animation-duration-normal) ease,
+    border-color var(--animation-duration-normal) ease;
+}
+
+.stepCard:hover {
+  transform: translateY(-5px);
+  border-color: #DA9931;
+  box-shadow: var(--shadow-lg),
+    0 0 15px color-mix(in srgb, #DA9931 30%, transparent);
+}
+
+.stepNumber {
+  position: absolute;
+  top: var(--spacing-4);
+  right: var(--spacing-4);
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: #DA9931;
+  color: #02001B;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+.stepIconWrapper {
+  width: 80px;
+  height: 80px;
+  background-color: color-mix(in srgb, #DA9931 20%, transparent);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: var(--spacing-4);
+}
+
+.stepIcon {
+  color: #DA9931;
+}
+
+.stepTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-top: var(--spacing-2);
+}
+
+.stepDescription {
+  color: var(--muted-foreground);
+  line-height: 1.6;
+}
+
+/* Partnership Section */
+.partnershipSection {
+  padding: var(--spacing-16) var(--spacing-6);
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  border-top: 1px solid var(--border);
+}
+
+.partnershipContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-12);
+  align-items: center;
+}
+
+.partnershipImageWrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 500px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+}
+
+.partnershipImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.partnershipContent {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-6);
+}
+
+.partnershipContent .sectionTitle {
+  text-align: left;
+  margin-bottom: var(--spacing-4);
+}
+
+.partnershipDescription {
+  color: var(--muted-foreground);
+  line-height: 1.6;
+  font-size: 1.125rem;
+  margin-bottom: var(--spacing-4);
+}
+
+.benefitsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-6);
+  margin-bottom: var(--spacing-6);
+}
+
+.benefitCard {
+  background-color: var(--card);
+  padding: var(--spacing-6);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border);
+  transition: transform var(--animation-duration-normal) ease,
+    box-shadow var(--animation-duration-normal) ease,
+    border-color var(--animation-duration-normal) ease;
+}
+
+.benefitCard:hover {
+  transform: translateY(-3px);
+  border-color: #DA9931;
+  box-shadow: var(--shadow-lg),
+    0 0 15px color-mix(in srgb, #DA9931 30%, transparent);
+}
+
+.benefitIconWrapper {
+  width: 60px;
+  height: 60px;
+  background-color: color-mix(in srgb, #DA9931 20%, transparent);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--spacing-4);
+}
+
+.benefitIcon {
+  color: #DA9931;
+}
+
+.benefitTitle {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: var(--spacing-2);
+}
+
+.benefitDescription {
+  color: var(--muted-foreground);
+  line-height: 1.5;
+  font-size: 0.9375rem;
+}
+
+/* CTA Section */
+.ctaSection {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-4);
+  border-top: 1px solid var(--border);
+  margin-bottom: var(--spacing-4);
+}
+
+.ctaDescription {
+  max-width: 600px;
+  color: var(--muted-foreground);
+  line-height: 1.6;
+  margin-bottom: var(--spacing-4);
+}
+
+/* Newsletter Section */
+.newsletterSection {
+  text-align: center;
+  background-color: var(--surface);
+  max-width: 100%;
+}
+
+.newsletterDescription {
+  max-width: 600px;
+  margin: 0 auto var(--spacing-8) auto;
+  color: var(--muted-foreground);
+}
+
+.newsletterForm {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-4);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.newsletterInput {
+  flex-grow: 1;
+  height: 3.5rem;
+  font-size: 1rem;
+}
+
+.newsletterButton {
+  background-color: #DA9931;
+  color: #02001B;
+  font-weight: 600;
+  height: 3.5rem;
+  font-size: 1.125rem;
+  border-radius: var(--radius-md);
+  border: none;
+}
+
+.newsletterButton:hover {
+  background-color: color-mix(in srgb, #DA9931, black 10%);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .hero {
+    min-height: auto;
+    padding: var(--spacing-16) var(--spacing-4);
+  }
+
+  .mainHeadlineCentered {
+    font-size: 2.5rem;
+  }
+
+  .subHeadlineCentered {
+    font-size: 1.125rem;
+  }
+
+  .heroDownloadButtonsCentered {
+    gap: var(--spacing-4);
+  }
+
+  .sectionTitle {
+    font-size: 2rem;
+  }
+
+  .featureRowContent {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-8);
+  }
+
+  .rowReverse {
+    direction: ltr;
+  }
+
+  .featureRowText {
+    align-items: center;
+    text-align: center;
+  }
+
+  .featureRowTitle {
+    font-size: 1.75rem;
+  }
+
+  .phoneMockups {
+    flex-direction: column;
+    gap: var(--spacing-12);
+  }
+
+  .phoneWrapperSide,
+  .phoneWrapperCenter,
+  .phoneContainer,
+  .rotateLeft,
+  .rotateRight,
+  .rotateCenter {
+    transform: none !important;
+    opacity: 1 !important;
+  }
+
+  .phoneScreen {
+    box-shadow: 0 15px 30px rgba(2, 0, 27, 0.15) !important;
+    border-width: 7px !important;
+    border-radius: 32px !important;
+  }
+
+  .phoneImage {
+    border-radius: 24px !important;
+  }
+
+  .phoneButton {
+    display: none !important;
+  }
+
+  .phoneDynamicIsland {
+    top: 10px;
+    width: 50px;
+    height: 14px;
+    border-radius: 8px;
+  }
+
+  .phonePunchHole {
+    top: 9px;
+    width: 8px;
+    height: 8px;
+  }
+
+  .newsletterForm {
+    flex-direction: column;
+  }
+
+  .partnershipContainer {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-8);
+  }
+
+  .partnershipImageWrapper {
+    min-height: 300px;
+  }
+
+  .partnershipContent .sectionTitle {
+    text-align: center;
+  }
+
+  .partnershipDescription {
+    text-align: center;
+  }
+
+  .benefitsGrid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-4);
+  }
+}

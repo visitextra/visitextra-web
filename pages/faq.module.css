@@ -1,0 +1,185 @@
+.faqPage {
+  background-color: #02001B;
+  color: var(--foreground);
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: var(--spacing-16) var(--spacing-6);
+  background-color: color-mix(in srgb, #02001B 90%, black);
+  border-bottom: 1px solid var(--border);
+}
+
+.heroContent {
+  max-width: 800px;
+}
+
+.heroTitle {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.2;
+}
+
+@media (min-width: 768px) {
+  .heroTitle {
+    font-size: 4rem;
+  }
+}
+
+.mainContent {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: var(--spacing-12) var(--spacing-6);
+}
+
+/* Accordion Styles */
+.accordionRoot {
+  border-radius: var(--radius-lg);
+  width: 100%;
+  background-color: var(--surface);
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+}
+
+.accordionItem {
+  border-bottom: 1px solid var(--border);
+}
+
+.accordionItem:last-child {
+  border-bottom: 0;
+}
+
+.accordionHeader {
+  display: flex;
+}
+
+.accordionTrigger {
+  all: unset;
+  font-family: var(--font-family-base);
+  background-color: transparent;
+  padding: var(--spacing-6);
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 1;
+  color: var(--surface-foreground);
+  cursor: pointer;
+  transition: background-color var(--animation-duration-fast) ease;
+}
+
+.accordionTrigger:hover {
+  background-color: color-mix(in srgb, var(--surface) 95%, var(--accent));
+}
+
+.accordionTrigger[data-state='open'] > .accordionChevron {
+  transform: rotate(180deg);
+}
+
+.accordionChevron {
+  color: #DA9931;
+  transition: transform var(--animation-duration-normal) cubic-bezier(0.87, 0, 0.13, 1);
+}
+
+.accordionContent {
+  overflow: hidden;
+  font-size: 1rem;
+  color: var(--muted-foreground);
+  background-color: color-mix(in srgb, var(--surface) 95%, black);
+}
+
+.accordionContent[data-state='open'] {
+  animation: slideDown var(--animation-duration-normal) cubic-bezier(0.87, 0, 0.13, 1);
+}
+
+.accordionContent[data-state='closed'] {
+  animation: slideUp var(--animation-duration-normal) cubic-bezier(0.87, 0, 0.13, 1);
+}
+
+.accordionText {
+  padding: var(--spacing-4) var(--spacing-6);
+  line-height: 1.7;
+}
+
+@keyframes slideDown {
+  from {
+    height: 0;
+  }
+  to {
+    height: var(--radix-accordion-content-height);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    height: var(--radix-accordion-content-height);
+  }
+  to {
+    height: 0;
+  }
+}
+
+/* CTA Section */
+.ctaSection {
+  margin-top: var(--spacing-16);
+  text-align: center;
+  background-color: var(--surface);
+  padding: var(--spacing-8);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+}
+
+.ctaTitle {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: var(--surface-foreground);
+}
+
+.ctaText {
+  color: var(--muted-foreground);
+  margin-top: var(--spacing-2);
+  margin-bottom: var(--spacing-6);
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ctaButton {
+  background-color: #DA9931;
+  color: #02001B;
+  font-weight: 600;
+}
+
+.ctaButton:hover {
+  background-color: color-mix(in srgb, #DA9931 90%, white);
+}
+
+/* Tabs Layout */
+.tabsRoot {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-bottom: var(--spacing-8);
+}
+
+.tabsList {
+  margin-bottom: var(--spacing-8) !important;
+  justify-content: center;
+  max-width: 500px;
+  width: 100%;
+}
+
+.tabContentContainer {
+  width: 100%;
+}
+
+.tabsTrigger {
+  flex: 1;
+}

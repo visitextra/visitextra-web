@@ -1,0 +1,231 @@
+.partnershipPage {
+  background-color: #02001B;
+  color: var(--foreground);
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: var(--spacing-16) var(--spacing-6);
+  background-color: color-mix(in srgb, #02001B 90%, black);
+  border-bottom: 1px solid var(--border);
+}
+
+.heroContent {
+  max-width: 800px;
+}
+
+.heroTitle {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.2;
+}
+
+.heroSubtitle {
+  font-size: 1.25rem;
+  color: var(--muted-foreground);
+  margin-top: var(--spacing-4);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 768px) {
+  .heroTitle {
+    font-size: 4rem;
+  }
+}
+
+.mainContent {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--spacing-12) var(--spacing-6);
+}
+
+.section {
+  margin-bottom: var(--spacing-16);
+}
+
+.sectionTitle {
+  font-size: 2.25rem;
+  font-weight: 600;
+  color: #DA9931;
+  text-align: center;
+  margin-bottom: var(--spacing-8);
+}
+
+/* Partnership Models */
+.modelsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--spacing-8);
+}
+
+.modelCard {
+  background-color: var(--surface);
+  padding: var(--spacing-8);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  border: 1px solid transparent;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform var(--animation-duration-normal) ease,
+    box-shadow var(--animation-duration-normal) ease,
+    border-color var(--animation-duration-normal) ease;
+}
+
+.modelCard:hover {
+  transform: translateY(-5px);
+  border-color: #DA9931;
+  box-shadow: var(--shadow-lg), 0 0 15px color-mix(in srgb, #DA9931 30%, transparent);
+}
+
+.modelIcon {
+  color: #DA9931;
+  margin-bottom: var(--spacing-4);
+}
+
+.modelTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--surface-foreground);
+  margin-bottom: var(--spacing-3);
+}
+
+.modelDescription {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--muted-foreground);
+  flex-grow: 1;
+}
+
+/* Partnership Benefits */
+.benefitsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--spacing-6);
+  justify-content: center;
+}
+
+.benefitItem {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-3);
+  background-color: var(--surface);
+  padding: var(--spacing-4);
+  border-radius: var(--radius-md);
+  font-weight: 500;
+  color: var(--surface-foreground);
+}
+
+.benefitItem svg {
+  color: #DA9931;
+  flex-shrink: 0;
+}
+
+/* Form Section */
+.formContainer {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-12);
+  background-color: var(--surface);
+  padding: var(--spacing-8);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+}
+
+@media (min-width: 992px) {
+  .formContainer {
+    grid-template-columns: 1fr 1.25fr;
+    padding: var(--spacing-12);
+  }
+}
+
+.formInfo {
+  text-align: left;
+}
+
+.formInfo .sectionTitle {
+  text-align: left;
+  margin-bottom: var(--spacing-4);
+}
+
+.formDescription {
+  color: var(--muted-foreground);
+  line-height: 1.7;
+  margin-bottom: var(--spacing-6);
+}
+
+.contactInfo {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4);
+  margin-top: var(--spacing-8);
+}
+
+.contactInfoTitle {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--surface-foreground);
+  margin-bottom: var(--spacing-2);
+}
+
+.contactLink {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-3);
+  color: var(--muted-foreground);
+  text-decoration: none;
+  transition: color var(--animation-duration-fast) ease;
+}
+
+.contactLink:hover {
+  color: #DA9931;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4);
+}
+
+.formField {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
+}
+
+.formField label {
+  font-weight: 500;
+  font-size: 0.875rem;
+}
+
+.errorText {
+  color: var(--error);
+  font-size: 0.875rem;
+  margin-top: var(--spacing-1);
+}
+
+.submitButton {
+  background-color: #DA9931;
+  color: #02001B;
+  font-weight: 600;
+  font-size: 1rem;
+  margin-top: var(--spacing-4);
+  height: 3rem;
+}
+
+.submitButton:hover {
+  background-color: color-mix(in srgb, #DA9931 90%, white);
+}
+
+.submitButton:disabled {
+  background-color: var(--muted);
+  color: var(--muted-foreground);
+  cursor: not-allowed;
+}
